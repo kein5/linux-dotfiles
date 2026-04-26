@@ -1,0 +1,3 @@
+active_on_launch: True
+use_mode_indicator: True
+session_keymap: "MS-IME"

@@ -1,0 +1,6 @@
+[settings]
+activate_aggressive = false
+idiomatic_version_file_enable_tools = ["node", "python", "ruby"]
+legacy_version_file = true
+terminal_progress = true
+

@@ -1,0 +1,29 @@
+auto_sync = true
+enter_accept = true
+keymap_mode = "auto"
+style = "compact"
+inline_height = 24
+show_preview = true
+show_help = true
+show_tabs = true
+workspaces = true
+update_check = false
+prefers_reduced_motion = true
+
+[sync]
+records = true
+
+[dotfiles]
+enabled = true
+
+[daemon]
+enabled = true
+autostart = true
+sync_frequency = 300
+
+[theme]
+name = "default"
+
+[ui]
+columns = ["duration", "time", { type = "directory", width = 24 }, "command"]
+

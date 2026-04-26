@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -eu
+
+target="${HOME}"
+
+if [ -n "${NAUTILUS_SCRIPT_SELECTED_FILE_PATHS:-}" ]; then
+  target="$(printf '%s\n' "$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS" | head -n1)"
+fi
+
+if [ -f "$target" ]; then
+  target="$(dirname "$target")"
+fi
+
+exec ghostty --working-directory="$target"
+

@@ -1,0 +1,9 @@
+.git
+.gitignore
+.chezmoiignore
+.codex
+README.md
+LICENSE
+private_dot_config
+cog.toml
+CHANGELOG.md

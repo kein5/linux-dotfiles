@@ -1,0 +1,21 @@
+[misc]
+display_time = true
+cleanup = true
+show_skipped = true
+notify_end = "on_failure"
+disable = ["containers"]
+
+[linux]
+arch_package_manager = "autodetect"
+
+[git]
+pull_predefined = true
+arguments = "--rebase --autostash"
+max_concurrency = 5
+
+[mise]
+bump = false
+jobs = 4
+
+[commands]
+"Refresh chezmoi state" = "chezmoi git pull -- --autostash --rebase && chezmoi apply"

@@ -1,0 +1,17 @@
+default_shell "fish"
+pane_frames true
+mouse_mode true
+copy_on_select false
+scroll_buffer_size 10000
+default_layout "compact"
+theme "default"
+show_startup_tips false
+show_release_notes false
+
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name false
+    }
+}
+
