@@ -1,40 +1,11 @@
-# Managed by chezmoi
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=50000
+SAVEHIST=50000
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/kei/.zshrc'
 
-export EDITOR="nvim"
-export VISUAL="$EDITOR"
-export PAGER="less"
-export LESSHISTFILE=-
-
-if [ -f "$HOME/.config/shell/aliases.sh" ]; then
-  . "$HOME/.config/shell/aliases.sh"
-fi
-
-y() {
-  if ! command -v yazi >/dev/null 2>&1; then
-    printf '%s\n' "yazi is not installed" >&2
-    return 127
-  fi
-
-  local tmp cwd
-  tmp="${TMPDIR:-/tmp}/yazi-cwd.$$"
-  yazi "$@" --cwd-file="$tmp"
-  if [ -f "$tmp" ]; then
-    cwd="$(cat "$tmp")"
-    rm -f "$tmp"
-    if [ -n "$cwd" ] && [ -d "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-      cd "$cwd" || return
-    fi
-  fi
-}
-
-if command -v atuin >/dev/null 2>&1; then
-  eval "$(atuin init zsh)"
-fi
-
-if command -v starship >/dev/null 2>&1; then
-  eval "$(starship init zsh)"
-fi
-
-if command -v mise >/dev/null 2>&1; then
-  eval "$(mise activate zsh)"
-fi
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall

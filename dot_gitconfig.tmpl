@@ -1,7 +1,7 @@
 # Managed by chezmoi
 [user]
-	name = "{{ env "GIT_AUTHOR_NAME" | default "Your Name" }}"
-	email = "{{ env "GIT_AUTHOR_EMAIL" | default "you@example.com" }}"
+	name = "{{ .name }}"
+	email = "{{ .email }}"
 
 [init]
 	defaultBranch = main
